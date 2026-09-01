@@ -131,6 +131,7 @@ a {
 }
 
 .form-field input {
+  width: 100%;
   padding: 10px 12px;
   border-radius: var(--radius-sm);
   border: 1px solid var(--color-border);

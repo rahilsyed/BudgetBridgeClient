@@ -1,7 +1,9 @@
 import { Route, Routes } from 'react-router-dom';
 import ProtectedRoute from '../components/common/ProtectedRoute';
+import DashboardLayout from '../components/layout/DashboardLayout';
 import LandingPage from '../pages/landing/LandingPage';
-import DashboardPage from '../pages/dashboard/DashboardPage';
+import DashboardHome from '../pages/dashboard/DashboardHome';
+import MyAccountPage from '../pages/account/MyAccountPage';
 
 const AppRoutes = () => (
   <Routes>
@@ -10,10 +12,13 @@ const AppRoutes = () => (
       path="/dashboard"
       element={
         <ProtectedRoute>
-          <DashboardPage />
+          <DashboardLayout />
         </ProtectedRoute>
       }
-    />
+    >
+      <Route index element={<DashboardHome />} />
+      <Route path="account" element={<MyAccountPage />} />
+    </Route>
   </Routes>
 );
 

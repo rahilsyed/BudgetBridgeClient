@@ -106,6 +106,7 @@
 
 .auth-form-row .form-field {
   flex: 1;
+  min-width: 0;
 }
 
 .auth-form-footnote {
